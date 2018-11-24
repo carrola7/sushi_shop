@@ -1,0 +1,19 @@
+include _mixins
+
+doctype html
+html
+  head
+    title= title
+    +stylesheet_link_tag("application")
+  body
+  header
+    a.logo(href="#")
+      img(src="images/logo.png")
+    div.cart
+      a(href="#")
+        span.left Shopping Cart
+        span.right 
+          span.count 0 
+          | items
+
+  block content

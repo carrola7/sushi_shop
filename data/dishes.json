@@ -1,0 +1,268 @@
+[
+  {
+    "name": "Sashimi Salad",
+    "price": 12,
+    "image": "images/sashimi-salad.jpg",
+    "description": "Organic greens topped with fresh sashimi, wasabi soy vinaigrette.",
+    "nutriInfo": {
+      "protein": 2.9156,
+      "fat": 2.4396,
+      "carbs": 3.8071,
+      "energyKj": 17.5775,
+      "energyKcal": 4.2011,
+      "sugar": 0.3738
+    }
+  },
+  {
+    "name": "Chirashi sushi",
+    "price": 21,
+    "image": "images/chirashi-sushi.jpg",
+    "description": "Sushi bar variety with sushi rice.",
+    "nutriInfo": {
+      "protein": 2.3138,
+      "fat": 0.6041,
+      "carbs": 7.8006,
+      "energyKj": 7.5314,
+      "energyKcal": 1.8,
+      "sugar": 0.3114
+    }
+  },
+  {
+    "name": "Seaweed salad",
+    "price": 17,
+    "image": "images/seaweed-salad.jpg",
+    "description": "A nice seaweed salad.",
+    "nutriInfo": {
+      "protein": 0.229,
+      "fat": 2.2852,
+      "carbs": 4.8824,
+      "energyKj": 5.1003,
+      "energyKcal": 1.2190,
+      "sugar": 0.0037
+    }
+  },
+  {
+    "name": "Edamame",
+    "price": 4,
+    "image": "images/edamame.jpg",
+    "description": "Boiled soy beans with salt.",
+    "nutriInfo": {
+      "protein": 0.7436,
+      "fat": 1.9771,
+      "carbs": 0.674,
+      "energyKj": 17.294,
+      "energyKcal": 4.1334,
+      "sugar": 0.1028
+    }
+  },
+  {
+    "name": "Miso soup",
+    "price": 4,
+    "image": "images/miso-soup.jpg",
+    "description": "Soy bean with Wacame seaweed, tofu and spring onion.",
+    "nutriInfo": {
+      "protein": 2.7642,
+      "fat": 2.1552,
+      "carbs": 9.5294,
+      "energyKj": 9.393,
+      "energyKcal": 2.2450,
+      "sugar": 0.1399
+    }
+  },
+  {
+    "name": "Maguro",
+    "price": 12.5,
+    "image": "images/maguro.jpg",
+    "description": "Tuna pieces.",
+    "nutriInfo": {
+      "protein": 2.2293,
+      "fat": 0.7329,
+      "carbs": 0.0618,
+      "energyKj": 28.2176,
+      "energyKcal": 6.7442,
+      "sugar": 0.4018
+    }
+  },
+  {
+    "name": "Shake",
+    "price": 10,
+    "image": "images/shake.jpg",
+    "description": "",
+    "nutriInfo": {
+      "protein": 1.4804,
+      "fat": 1.4739,
+      "carbs": 0.2237,
+      "energyKj": 16.9406,
+      "energyKcal": 4.0489,
+      "sugar": 0.245
+    }
+  },
+  {
+    "name": "Shiromi",
+    "price": 9.5,
+    "image": "images/shiromi.jpg",
+    "description": "White fish pieces.",
+    "nutriInfo": {
+      "protein": 0.2814,
+      "fat": 1.3963,
+      "carbs": 1.5973,
+      "energyKj": 16.4487,
+      "energyKcal": 3.9313,
+      "sugar": 0.0509
+    }
+  },
+  {
+    "name": "Tekka maki",
+    "price": 6,
+    "image": "images/tekka-maki.jpg",
+    "description": "Tuna roll wasabi. - 6 pieces",
+    "nutriInfo": {
+      "protein": 0.9559,
+      "fat": 1.6395,
+      "carbs": 7.4319,
+      "energyKj": 9.7847,
+      "energyKcal": 2.3386,
+      "sugar": 0.4771
+    }
+  },
+  {
+    "name": "Hosomaki Mix",
+    "price": 17,
+    "image": "images/hosomaki-mix.jpg",
+    "description": "18 peices.",
+    "nutriInfo": {
+      "protein": 2.683,
+      "fat": 2.858,
+      "carbs": 1.6309,
+      "energyKj": 23.891,
+      "energyKcal": 5.7099,
+      "sugar": 0.4839
+    }
+  },
+  {
+    "name": "California rolls",
+    "price": 7.75,
+    "image": "images/california-rolls.jpg",
+    "description": "Crab sticks, avocado and cucumber. - 8 pieces",
+    "nutriInfo": {
+      "protein": 0.848,
+      "fat": 0.1205,
+      "carbs": 3.6646,
+      "energyKj": 18.6541,
+      "energyKcal": 4.4584,
+      "sugar": 0.0174
+    }
+  },
+  {
+    "name": "Seattle rolls",
+    "price": 8,
+    "image": "images/seattle-rolls.jpg",
+    "description": "Smoked salmon. Cucumber. Cream cheese.",
+    "nutriInfo": {
+      "protein": 2.2802,
+      "fat": 2.309,
+      "carbs": 9.5136,
+      "energyKj": 18.6961,
+      "energyKcal": 4.4685,
+      "sugar": 0.2533
+    }
+  },
+  {
+    "name": "Spicy Tuna Rolls",
+    "price": 6,
+    "image": "images/spicytuna-rolls.jpg",
+    "description": "Spicy tuna, spring onion and avocado. - 6 pieces",
+    "nutriInfo": {
+      "protein": 1.0003,
+      "fat": 1.5621,
+      "carbs": 2.6322,
+      "energyKj": 25.0911,
+      "energyKcal": 5.9969,
+      "sugar": 0.0474
+    }
+  },
+  {
+    "name": "Ebi rolls",
+    "price": 8,
+    "image": "images/ebi-rolls.jpg",
+    "description": "King prawns, avocado and asparagus. - 8 pieces",
+    "nutriInfo": {
+      "protein": 2.826,
+      "fat": 2.854,
+      "carbs": 2.433,
+      "energyKj": 19.2756,
+      "energyKcal": 4.607,
+      "sugar": 0.439
+    }
+  },
+  {
+    "name": "Chicken Teriyaki",
+    "price": 12,
+    "image": "images/chicken-teriyaki.jpg",
+    "description": "Sauted chicken with teiyaki sauce.",
+    "nutriInfo": {
+      "protein": 2.2375,
+      "fat": 2.6376,
+      "carbs": 7.4605,
+      "energyKj": 18.7052,
+      "energyKcal": 4.4707,
+      "sugar": 0.4271
+    }
+  },
+  {
+    "name": "Salmon Teriyaki",
+    "price": 13.50,
+    "image": "images/salmon-teriyaki.jpg",
+    "description": "Sauted salmon with teriyaki sauce.",
+    "nutriInfo": {
+      "protein": 2.5748,
+      "fat": 0.0234,
+      "carbs": 6.5532,
+      "energyKj": 22.7136,
+      "energyKcal": 5.4287,
+      "sugar": 0.1158
+    }
+  },
+  {
+    "name": "Gohan",
+    "price": 3,
+    "image": "images/gohan.jpg",
+    "description": "Steamed rice.",
+    "nutriInfo": {
+      "protein": 2.4622,
+      "fat": 2.672,
+      "carbs": 9.7993,
+      "energyKj": 25.1129,
+      "energyKcal": 6.0021,
+      "sugar": 0.3426
+    }
+  },
+  {
+    "name": "Tori Katsu",
+    "price": 11,
+    "image": "images/tori-katsu.jpg",
+    "description": "Pan-fried chicken breast with yasai salad.",
+    "nutriInfo": {
+      "protein": 1.0267,
+      "fat": 2.2143,
+      "carbs": 6.1597,
+      "energyKj": 17.8688,
+      "energyKcal": 4.2708,
+      "sugar": 0.0161
+    }
+  },
+  {
+    "name": "Yaki Udon",
+    "price": 11.50,
+    "image": "images/yaki-udon.jpg",
+    "description": "Udon noodles with chicken, king prawns and vegetables.",
+    "nutriInfo": {
+      "protein": 1.7697,
+      "fat": 0.2534,
+      "carbs": 6.9919,
+      "energyKj": 7.508,
+      "energyKcal": 1.7945,
+      "sugar": 0.1798
+    }
+  }
+]
