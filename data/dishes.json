@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Sashimi Salad",
     "price": 12,
     "image": "images/sashimi-salad.jpg",
@@ -14,6 +15,7 @@
     }
   },
   {
+    "id": 2,
     "name": "Chirashi sushi",
     "price": 21,
     "image": "images/chirashi-sushi.jpg",
@@ -28,6 +30,7 @@
     }
   },
   {
+    "id": 3,
     "name": "Seaweed salad",
     "price": 17,
     "image": "images/seaweed-salad.jpg",
@@ -42,6 +45,7 @@
     }
   },
   {
+    "id": 4,
     "name": "Edamame",
     "price": 4,
     "image": "images/edamame.jpg",
@@ -56,6 +60,7 @@
     }
   },
   {
+    "id": 5,
     "name": "Miso soup",
     "price": 4,
     "image": "images/miso-soup.jpg",
@@ -70,6 +75,7 @@
     }
   },
   {
+    "id": 6,
     "name": "Maguro",
     "price": 12.5,
     "image": "images/maguro.jpg",
@@ -84,6 +90,7 @@
     }
   },
   {
+    "id": 7,
     "name": "Shake",
     "price": 10,
     "image": "images/shake.jpg",
@@ -98,6 +105,7 @@
     }
   },
   {
+    "id": 8,
     "name": "Shiromi",
     "price": 9.5,
     "image": "images/shiromi.jpg",
@@ -112,6 +120,7 @@
     }
   },
   {
+    "id": 9,
     "name": "Tekka maki",
     "price": 6,
     "image": "images/tekka-maki.jpg",
@@ -126,6 +135,7 @@
     }
   },
   {
+    "id": 10,
     "name": "Hosomaki Mix",
     "price": 17,
     "image": "images/hosomaki-mix.jpg",
@@ -140,6 +150,7 @@
     }
   },
   {
+    "id": 11,
     "name": "California rolls",
     "price": 7.75,
     "image": "images/california-rolls.jpg",
@@ -154,6 +165,7 @@
     }
   },
   {
+    "id": 12,
     "name": "Seattle rolls",
     "price": 8,
     "image": "images/seattle-rolls.jpg",
@@ -168,6 +180,7 @@
     }
   },
   {
+    "id": 13,
     "name": "Spicy Tuna Rolls",
     "price": 6,
     "image": "images/spicytuna-rolls.jpg",
@@ -182,6 +195,7 @@
     }
   },
   {
+    "id": 14,
     "name": "Ebi rolls",
     "price": 8,
     "image": "images/ebi-rolls.jpg",
@@ -196,6 +210,7 @@
     }
   },
   {
+    "id": 15,
     "name": "Chicken Teriyaki",
     "price": 12,
     "image": "images/chicken-teriyaki.jpg",
@@ -210,6 +225,7 @@
     }
   },
   {
+    "id": 16,
     "name": "Salmon Teriyaki",
     "price": 13.50,
     "image": "images/salmon-teriyaki.jpg",
@@ -224,6 +240,7 @@
     }
   },
   {
+    "id": 17,
     "name": "Gohan",
     "price": 3,
     "image": "images/gohan.jpg",
@@ -238,6 +255,7 @@
     }
   },
   {
+    "id": 18,
     "name": "Tori Katsu",
     "price": 11,
     "image": "images/tori-katsu.jpg",
@@ -252,6 +270,7 @@
     }
   },
   {
+    "id": 19,
     "name": "Yaki Udon",
     "price": 11.50,
     "image": "images/yaki-udon.jpg",

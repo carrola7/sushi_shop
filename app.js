@@ -6,7 +6,7 @@ var logger = require('morgan');
 var stylus = require("stylus");
 var nib = require("nib");
 
-var indexRouter = require('./routes/index');
+var allRouter = require('./routes/all');
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/', indexRouter);
+app.use('/', allRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

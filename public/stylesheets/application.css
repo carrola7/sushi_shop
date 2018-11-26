@@ -3,21 +3,22 @@ body {
   background: url("../images/background-image.png");
   font: normal 14px "Lucianda", Helvetica, Arial, sans-serif;
 }
-header {
+body > header {
   width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
+  border-bottom: 1px solid #787878;
 }
-header span {
+body > header span {
   display: inline-block;
   box-sizing: border-box;
   font-size: 10px;
   letter-spacing: 1px;
 }
-header span.right {
-  width: 50%;
+body > header span.right {
+  width: 49%;
   text-align: center;
   color: #fff;
   position: relative;
@@ -26,7 +27,7 @@ header span.right {
   font-size: 12px;
   text-transform: uppercase;
 }
-header span.right:before {
+body > header span.right:before {
   content: "";
   display: block;
   width: 0;
@@ -39,33 +40,37 @@ header span.right:before {
   border-bottom: 14px solid transparent;
   border-left: 14px solid #000;
 }
-header span.right span.count {
+body > header span.right span.count {
   font-size: 12px;
   margin-right: 4px;
 }
-header span.left {
-  width: 50%;
+body > header span.left {
+  width: 49%;
   padding: 8px 5px;
   text-align: center;
   background: #000;
   color: #b0b0b0;
   text-transform: uppercase;
 }
-header div.cart {
+body > header div.cart_summary {
   width: 220px;
 }
-main {
+#index main {
   width: 1000px;
   margin: 0 auto;
 }
-main ul.dishes {
+#index main ul.dishes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-main ul.dishes li {
+#index main ul.dishes li {
   background-color: #fff;
+  margin-top: 20px;
+  box-sizing: border-box;
+  position: relative;
+  height: 340px;
 }
-main ul.dishes li h2 {
+#index main ul.dishes li h2 {
   color: #ab7829;
   text-transform: capitalize;
   font-size: 1.25rem;
@@ -73,4 +78,54 @@ main ul.dishes li h2 {
   text-align: center;
   padding: 25px 0 10px 0;
   letter-spacing: 1px;
+}
+#index main ul.dishes li article {
+  box-shadow: 2px 0px 2px -2px #888;
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+}
+#index main ul.dishes li article p {
+  text-align: center;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+#index main ul.dishes li article header:hover {
+  cursor: pointer;
+}
+#index main ul.dishes li article header:hover h2 {
+  color: #000;
+}
+#index main ul.dishes li article header:hover:after {
+  content: url("/images/arrow-right.png");
+  box-sizing: border-box;
+  padding: 70px 85px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+}
+#index main ul.dishes li a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #d60041;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 13.5px 0;
+  border-top: 1px dotted #888;
+  transition: none;
+}
+#index main ul.dishes li a:before {
+  content: "+";
+  margin-right: 4px;
+  font-weight: bold;
+}
+#index main ul.dishes li a:hover {
+  background: #d60041;
+  color: #fff;
+  transition: background-color 1s, color 1s;
 }

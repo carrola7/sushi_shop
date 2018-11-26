@@ -2,6 +2,6 @@ mixin stylesheet_link_tag(src)
   link(rel="stylesheet" href=`/stylesheets/${src}.css`)
 
 mixin javascript_link_tag(src, ...rest)
-  script(type="text/javascript" src=`/javscripts/${src}.js`)
+  script(type="text/javascript" src=`/javascripts/${src}.js`)
   each file in rest
     script(type="text/javascript" src=`/javascripts/${file}.js`)

@@ -5,15 +5,19 @@ html
   head
     title= title
     +stylesheet_link_tag("application")
+    +javascript_link_tag("vendor/all")
+    +javascript_link_tag("handlebars_template")
   body
-  header
-    a.logo(href="#")
-      img(src="images/logo.png")
-    div.cart
-      a(href="#")
-        span.left Shopping Cart
-        span.right 
-          span.count 0 
-          | items
+    header
+
 
   block content
+
+  +javascript_link_tag("application")
+  +javascript_link_tag("models/dish")
+  +javascript_link_tag("collections/dishes")
+  +javascript_link_tag("views/dish", "views/index", "views/header")
+  script(type="text/javascript").
+    App.dishes = new Dishes(!{JSON.stringify(dishes)});
+  +javascript_link_tag("router")
+  block scripts
