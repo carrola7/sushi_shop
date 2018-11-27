@@ -1,4 +1,4 @@
-var IndexView = Backbone.View.extend({
+var MenuView = Backbone.View.extend({
   template: App.templates.index,
   attributes: {
     id: "index"

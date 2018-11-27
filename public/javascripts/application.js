@@ -1,9 +1,10 @@
 var App = {
   templates: JST,
   $el: $("body"),
-  indexView: function() {
-    this.index = new IndexView();
+  menuView: function() {
+    this.menu = new MenuView();
     this.renderDishes();
+    this.bindEvents();
   },
 
   renderDishes: function() {
@@ -20,10 +21,15 @@ var App = {
     this.header = new HeaderView();
   },
 
-  init: function() {
-    this.renderHeaderView();
-    this.indexView();
-  }
+  bindEvents: function() {
+    _.extend(this, Backbone.Events);
+    this.listenTo(this.dishes, "showMenuItem", this.renderItemView)
+  },
+
+  renderItemView: function(dish) {
+    router.navigate(`menu/${dish.id}`);
+    console.log('routed ' + dish.get('id'))
+  },
 };
 
 Handlebars.registerHelper("formatPrice", function(price) {

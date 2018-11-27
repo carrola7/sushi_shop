@@ -1,19 +1,25 @@
 var router = new (Backbone.Router.extend({
   routes: {
-    "menu": "menuView"
+    "menu": "menuView",
+    "menu/:id": "menuItemView"
   },
 
   initialize: function() {
-    this.route(/^\/?$/, "index", this.menuView);
+    this.route(/^\/?$/, "index", function() {
+      this.navigate('menu', { trigger: true });
+    });
   },
   menuView: function() {
     App.renderHeaderView();
-    App.indexView();
+    App.menuView();
+  },
+  menuItemView: function(id) {
+    App.renderItemView(App.dishes.get(+id));
   }
 }))();
 
 Backbone.history.start({
-  pushState: true
+  pushState: true,
 });
 
 $(document).on("click", "a[href^='/']", function(event) {
