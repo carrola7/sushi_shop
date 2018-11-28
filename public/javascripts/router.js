@@ -5,13 +5,14 @@ var router = new (Backbone.Router.extend({
   },
 
   initialize: function() {
-    this.route(/^\/?$/, "index", function() {
+    this.route("index.html", "index", function() {
       this.navigate('menu', { trigger: true });
     });
   },
   menuView: function() {
-    App.renderHeaderView();
-    App.menuView();
+    App.index || App.renderIndexView();
+    App.header || App.renderHeaderView();
+    App.renderMenuView();
   },
   menuItemView: function(id) {
     App.renderItemView(App.dishes.get(+id));

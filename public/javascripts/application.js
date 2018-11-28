@@ -1,7 +1,7 @@
 var App = {
   templates: JST,
   $el: $("body"),
-  menuView: function() {
+  renderMenuView: function() {
     this.menu = new MenuView();
     this.renderDishes();
     this.bindEvents();
@@ -21,6 +21,10 @@ var App = {
     this.header = new HeaderView();
   },
 
+  renderIndexView: function() {
+    this.index = new IndexView();
+  },
+
   bindEvents: function() {
     _.extend(this, Backbone.Events);
     this.listenTo(this.dishes, "showMenuItem", this.renderItemView)
@@ -29,6 +33,9 @@ var App = {
   renderItemView: function(dish) {
     router.navigate(`menu/${dish.id}`);
     console.log('routed ' + dish.get('id'))
+    new ItemView({
+      model: dish
+    });
   },
 };
 

@@ -49,67 +49,67 @@ body > header
     text-transform: uppercase
   div.cart_summary
     width: 220px
-#index
-    main
-      width: 1000px
-      margin: 0 auto
-      ul.dishes
-        display: grid
-        grid-template-columns: repeat(5, 1fr)
-        li
-          background-color: #fff
-          margin-top: 20px
-          box-sizing: border-box
-          position: relative
-          height: 340px
-          h2
-            color: #ab7829
-            text-transform: capitalize
-            font-size: 1.25rem
-            font-weight: 100
+body main
+  width: 1000px
+  margin: 0 auto
+  #menu
+    ul.dishes
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      li
+        background-color: #fff
+        margin-top: 20px
+        box-sizing: border-box
+        position: relative
+        height: 340px
+        h2
+          color: #ab7829
+          text-transform: capitalize
+          font-size: 1.25rem
+          font-weight: 100
+          text-align: center
+          padding: 25px 0 10px 0
+          letter-spacing: 1px
+        article
+          box-shadow: 2px 0px 2px -2px #888;
+          position: absolute
+          height: 100%
+          z-index: 10
+          p
             text-align: center
-            padding: 25px 0 10px 0
-            letter-spacing: 1px
-          article
-            box-shadow: 2px 0px 2px -2px #888;
-            position: absolute
-            height: 100%
-            z-index: 10
-            p
-              text-align: center
-              color: #b0b0b0
-              margin-bottom: 20px
-            header
-              &:hover
-                cursor: pointer
-                h2
-                  color: #000
-                &:after
-                  content: url("/images/arrow-right.png")
-                  box-sizing: border-box
-                  padding: 70px 85px
-                  position: absolute
-                  width: 200px
-                  height: 200px
-                  z-index: 15
-                  top: 0
-                  left: 0
-                  background: rgba(0, 0, 0, 0.6)
-          a
-            display: block
-            text-decoration: none
-            font-size: 0.8rem
-            color: #d60041
-            text-transform: uppercase
-            text-align: center
-            padding: 13.5px 0
-            border-top: 1px dotted #888
-            transition: none
-            &:before
-              content: "+"
-              margin-right: 4px
-              font-weight: bold
+            color: #b0b0b0
+            margin-bottom: 20px
+          header
             &:hover
-              background #d60041
-              color: #fff
-              transition: background-color 1s, color 1s;
+              cursor: pointer
+              h2
+                color: #000
+              &:after
+                content: url("/images/arrow-right.png")
+                box-sizing: border-box
+                padding: 70px 85px
+                position: absolute
+                width: 200px
+                height: 200px
+                z-index: 15
+                top: 0
+                left: 0
+                background: rgba(0, 0, 0, 0.6)
+        a
+          display: block
+          text-decoration: none
+          font-size: 0.8rem
+          color: #d60041
+          text-transform: uppercase
+          text-align: center
+          padding: 13.5px 0
+          border-top: 1px dotted #888
+          transition: none
+          &:before
+            content: "+"
+            margin-right: 4px
+            font-weight: bold
+          &:hover
+            background #d60041
+            color: #fff
+            transition: background-color 1s, color 1s;

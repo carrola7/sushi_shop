@@ -17,5 +17,17 @@ this["JST"]["header"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":fu
 },"useData":true});
 
 this["JST"]["index"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<header></header><main>  <ul class=\"dishes\"></ul></main>";
+    return "<header></header><main></main><footer></footer>";
+},"useData":true});
+
+this["JST"]["item"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<img src=\""
+    + container.escapeExpression(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"image","hash":{},"data":data}) : helper)))
+    + "\"\" />";
+},"useData":true});
+
+this["JST"]["menu"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<ul class=\"dishes\"></ul>";
 },"useData":true});

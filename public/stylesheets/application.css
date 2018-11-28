@@ -55,22 +55,22 @@ body > header span.left {
 body > header div.cart_summary {
   width: 220px;
 }
-#index main {
+body main {
   width: 1000px;
   margin: 0 auto;
 }
-#index main ul.dishes {
+body main #menu ul.dishes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-#index main ul.dishes li {
+body main #menu ul.dishes li {
   background-color: #fff;
   margin-top: 20px;
   box-sizing: border-box;
   position: relative;
   height: 340px;
 }
-#index main ul.dishes li h2 {
+body main #menu ul.dishes li h2 {
   color: #ab7829;
   text-transform: capitalize;
   font-size: 1.25rem;
@@ -79,24 +79,24 @@ body > header div.cart_summary {
   padding: 25px 0 10px 0;
   letter-spacing: 1px;
 }
-#index main ul.dishes li article {
+body main #menu ul.dishes li article {
   box-shadow: 2px 0px 2px -2px #888;
   position: absolute;
   height: 100%;
   z-index: 10;
 }
-#index main ul.dishes li article p {
+body main #menu ul.dishes li article p {
   text-align: center;
   color: #b0b0b0;
   margin-bottom: 20px;
 }
-#index main ul.dishes li article header:hover {
+body main #menu ul.dishes li article header:hover {
   cursor: pointer;
 }
-#index main ul.dishes li article header:hover h2 {
+body main #menu ul.dishes li article header:hover h2 {
   color: #000;
 }
-#index main ul.dishes li article header:hover:after {
+body main #menu ul.dishes li article header:hover:after {
   content: url("/images/arrow-right.png");
   box-sizing: border-box;
   padding: 70px 85px;
@@ -108,7 +108,7 @@ body > header div.cart_summary {
   left: 0;
   background: rgba(0,0,0,0.6);
 }
-#index main ul.dishes li a {
+body main #menu ul.dishes li a {
   display: block;
   text-decoration: none;
   font-size: 0.8rem;
@@ -119,12 +119,12 @@ body > header div.cart_summary {
   border-top: 1px dotted #888;
   transition: none;
 }
-#index main ul.dishes li a:before {
+body main #menu ul.dishes li a:before {
   content: "+";
   margin-right: 4px;
   font-weight: bold;
 }
-#index main ul.dishes li a:hover {
+body main #menu ul.dishes li a:hover {
   background: #d60041;
   color: #fff;
   transition: background-color 1s, color 1s;
