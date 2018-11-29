@@ -129,3 +129,115 @@ body main #menu ul.dishes li a:hover {
   color: #fff;
   transition: background-color 1s, color 1s;
 }
+body main #item {
+  margin-top: 20px;
+  height: 600px;
+  background: url("../images/sushi-preview.png");
+}
+body main #item div.wrapper {
+  padding: 200px 0 200px 0;
+}
+body main #item section {
+  display: grid;
+  grid-template-columns: 100px 200px auto 200px 100px;
+  height: 200px;
+}
+body main #item section div.nav {
+  background-color: #000;
+}
+body main #item section div.nav:hover {
+  background: #d60041;
+  transition: background 0.35s;
+  cursor: pointer;
+}
+body main #item section div.prev img {
+  margin: 80px 0 0 30px;
+}
+body main #item section div.next img {
+  margin: 80px 0 0 40px;
+}
+body main #item section figure img {
+  display: block;
+}
+body main #item section article,
+body main #item section aside {
+  background-color: #fff;
+}
+body main #item section article {
+  border-right: 1px dotted #bbb;
+}
+body main #item section article h1 {
+  font-size: 2.2rem;
+  font-weight: 100;
+  padding: 20px 0 0 20px;
+}
+body main #item section article p {
+  padding: 5px 0 50px 20px;
+  font-size: 0.75rem;
+}
+body main #item section article footer {
+  border-top: 1px dotted #bbb;
+}
+body main #item section article footer h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #777;
+  display: inline-block;
+  padding: 15px 20px;
+}
+body main #item section article footer a {
+  float: right;
+  float: right;
+  padding: 7px 15px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 20px 20px 0 0;
+}
+body main #item section article footer a:hover {
+  background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+}
+body main #item section article footer a:before {
+  content: "+";
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+body main #item section article a.close {
+  text-decoration: none;
+  transform: rotate(45deg);
+  color: #000;
+  float: right;
+  font-size: 1.6rem;
+  margin: 10px 20px 0 0;
+}
+body main #item section aside {
+  padding: 25px 15px;
+}
+body main #item section aside h3 {
+  text-align: center;
+}
+body main #item section aside table {
+  padding: 10px 0 0 8px;
+}
+body main #item section aside table tr {
+  text-align: left;
+}
+body main #item section aside table td:first-child {
+  color: #777;
+}
+body main #item section aside table td {
+  font-size: 0.75rem;
+}
+body main #item section aside table td + td {
+  padding: 0 0 0 35px;
+  text-align: right;
+}

@@ -32,7 +32,6 @@ var App = {
 
   renderItemView: function(dish) {
     router.navigate(`menu/${dish.id}`);
-    console.log('routed ' + dish.get('id'))
     new ItemView({
       model: dish
     });
@@ -42,3 +41,7 @@ var App = {
 Handlebars.registerHelper("formatPrice", function(price) {
   return `$ ${(+price).toFixed(2)}`;
 });
+
+Handlebars.registerHelper("formatDecimalFourPlaces", function(num) {
+  return `${(+num).toFixed(4)}`
+})

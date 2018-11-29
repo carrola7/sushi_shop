@@ -13,6 +13,7 @@ var router = new (Backbone.Router.extend({
     App.index || App.renderIndexView();
     App.header || App.renderHeaderView();
     App.renderMenuView();
+    //App.renderItemView(App.dishes.get(2));
   },
   menuItemView: function(id) {
     App.renderItemView(App.dishes.get(+id));

@@ -1,0 +1,36 @@
+colors = {
+  text: #333,
+  main: #fff,
+  highlight: #ffff9d,
+  button: {
+    text: #fff,
+    bg: #00a388,
+  }
+}
+
+appearance()
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  
+addPlus()
+  content: "+"
+  margin-right: 5px
+  font-weight: bold
+  font-size: 0.9rem
+  
+button()
+  float: right
+  padding: 7px 15px
+  font-size: 0.8rem
+  text-decoration: none
+  text-transform: uppercase
+  color: colors.button.text
+  cursor: pointer
+  border: none
+  outline: none
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  appearance()
+  &:hover
+    background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+  
