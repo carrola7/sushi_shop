@@ -133,6 +133,7 @@ body main #item {
   margin-top: 20px;
   height: 600px;
   background: url("../images/sushi-preview.png");
+  display: none;
 }
 body main #item div.wrapper {
   padding: 200px 0 200px 0;

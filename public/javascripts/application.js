@@ -2,9 +2,11 @@ var App = {
   templates: JST,
   $el: $("body"),
   renderMenuView: function() {
+    $('#item').hide();
     this.menu = new MenuView();
     this.renderDishes();
     this.bindEvents();
+    router.navigate('menu');
   },
 
   renderDishes: function() {
@@ -27,15 +29,30 @@ var App = {
 
   bindEvents: function() {
     _.extend(this, Backbone.Events);
-    this.listenTo(this.dishes, "showMenuItem", this.renderItemView)
+    this.listenTo(this.dishes, "showMenuItem", this.renderItemView);
+    this.listenTo(this.dishes, "closeItem", this.closeItemView);
+    this.listenTo(this.dishes, "nextItem", this.showNextItem);
+    this.listenTo(this.dishes, "previousItem", this.showPreviousItem);
   },
-
+  closeItemView: function() {
+    $('#item').hide();
+    this.menu.$el.show();
+    router.navigate('menu');
+  },
   renderItemView: function(dish) {
+    this.menu.$el.hide();
     router.navigate(`menu/${dish.id}`);
-    new ItemView({
+    this.item = new ItemView({
       model: dish
     });
+    $('#item').show();
   },
+  showNextItem: function(dish) {
+    this.renderItemView(this.dishes.get(dish.get('id') + 1));
+  },
+  showPreviousItem: function(dish) {
+    this.renderItemView(this.dishes.get(dish.get('id') - 1));
+  }
 };
 
 Handlebars.registerHelper("formatPrice", function(price) {

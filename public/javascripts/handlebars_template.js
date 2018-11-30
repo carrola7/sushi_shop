@@ -17,7 +17,7 @@ this["JST"]["header"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":fu
 },"useData":true});
 
 this["JST"]["index"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<header></header><main></main><footer></footer>";
+    return "<header></header><main><div id=\"cart\"></div><div id=\"item\"></div></main><footer></footer>";
 },"useData":true});
 
 this["JST"]["item"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
