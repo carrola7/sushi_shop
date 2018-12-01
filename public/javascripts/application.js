@@ -8,7 +8,6 @@ var App = {
     this.bindEvents();
     router.navigate('menu');
   },
-
   renderDishes: function() {
     this.dishes.each(this.renderDishView);
   },
@@ -20,7 +19,10 @@ var App = {
   },
 
   renderHeaderView: function() {
-    this.header = new HeaderView();
+    this.createCart();
+    this.header = new HeaderView({
+      collection: this.cart
+    });
   },
 
   renderIndexView: function() {
@@ -33,6 +35,14 @@ var App = {
     this.listenTo(this.dishes, "closeItem", this.closeItemView);
     this.listenTo(this.dishes, "nextItem", this.showNextItem);
     this.listenTo(this.dishes, "previousItem", this.showPreviousItem);
+    this.listenTo(this.dishes, "addToCart", this.addToCart);
+  },
+  createCart: function() {
+    this.cart = new CartItems();
+    this.cart.view = new CartView({
+      el: $("#cart").get(0),
+      collection: this.cart
+    });
   },
   closeItemView: function() {
     $('#item').hide();
@@ -52,11 +62,14 @@ var App = {
   },
   showPreviousItem: function(dish) {
     this.renderItemView(this.dishes.get(dish.get('id') - 1));
-  }
+  },
+  addToCart: function(dish) {
+    this.cart.addItem(dish);
+  },
 };
 
 Handlebars.registerHelper("formatPrice", function(price) {
-  return `$ ${(+price).toFixed(2)}`;
+  return `$${(+price).toFixed(2)}`;
 });
 
 Handlebars.registerHelper("formatDecimalFourPlaces", function(num) {

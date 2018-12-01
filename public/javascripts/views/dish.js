@@ -2,7 +2,8 @@ var DishView = Backbone.View.extend({
   tagName: "li",
   template: App.templates.dish,
   events: {
-    "click article > header" : "showMenuItem"
+    "click article > header" : "showMenuItem",
+    "click a.add": "addToCart"
   },
   render: function() {
     var id = this.model.get("id");
@@ -13,6 +14,10 @@ var DishView = Backbone.View.extend({
   },
   showMenuItem: function() {
     this.model.collection.trigger("showMenuItem", this.model);
+  },
+  addToCart: function(event) {
+    event.preventDefault();
+    this.model.collection.trigger("addToCart", this.model);
   },
   initialize: function() {
     this.render();

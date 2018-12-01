@@ -5,7 +5,8 @@ var ItemView = Backbone.View.extend({
   events: {
     "click a.close": "closeItem",
     "click div.next": "nextItem",
-    "click div.prev": "previousItem"
+    "click div.prev": "previousItem",
+    "click a.add_cart": "addToCart"
   },
   closeItem: function(event) {
     event.preventDefault();
@@ -17,9 +18,12 @@ var ItemView = Backbone.View.extend({
   previousItem: function() {
     this.model.collection.trigger("previousItem", this.model);
   },
+  addToCart: function(event) {
+    event.preventDefault();
+    this.model.collection.trigger("addToCart", this.model);
+  },
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
-    //this.$el.appendTo(App.$el.find('main'));
     App.$el.find('#item').html(this.$el);
   },
   initialize: function() {
