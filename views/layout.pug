@@ -16,7 +16,7 @@ html
   +javascript_link_tag("application")
   +javascript_link_tag("models/dish")
   +javascript_link_tag("collections/dishes", "collections/cart_items")
-  +javascript_link_tag("views/dish", "views/menu", "views/header", "views/index", "views/item", "views/cart")
+  +javascript_link_tag("views/dish", "views/menu", "views/header", "views/index", "views/item", "views/cart", "views/checkout")
   script(type="text/javascript").
     App.dishes = new Dishes(!{JSON.stringify(dishes)});
   +javascript_link_tag("router")

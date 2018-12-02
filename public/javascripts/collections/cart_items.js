@@ -34,6 +34,6 @@ var CartItems = Backbone.Collection.extend({
     this.trigger("cartEmptied");
   },
   initialize: function() {
-    this.on("emptyCart", this.empty)
+    this.on("emptyCart", this.empty);
   },
 })

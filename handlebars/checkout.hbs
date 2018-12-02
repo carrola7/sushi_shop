@@ -1,0 +1,36 @@
+<div class="image_top"></div>
+<section>
+  <h1>Order Details</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th></th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each items}}
+        <tr data-id={{id}}>
+          <td><img src="{{image}}"/></td>
+          <td>{{name}}</td>
+          <td>
+            <span class="quantity-plus"></span>
+            <p>{{quantity}}</p>
+            <span class="quantity-minus"></span>
+          </td>
+          <td>{{price}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p>Total: <span class="total">{{total}}</span></p>
+  <footer>
+    <a href="#">Cancel Order</span>
+    <form action="/" method="post">
+      <input type="submit" value="ORDER NOW!">
+    </form>
+  </footer>
+</section>
+<div class="image_bottom"></div>

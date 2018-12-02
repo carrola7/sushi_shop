@@ -244,16 +244,22 @@ body main #item section aside table td + td {
   text-align: right;
 }
 body main #cart {
-  display: flex;
-  justify-content: space-between;
+  display: none;
   background: #000;
   font-size: 0.7rem;
+  height: 120px;
+}
+body main #cart .flex-container {
+  display: flex;
+  justify-content: space-between;
 }
 body main #cart figure img {
   height: 100px;
 }
 body main #cart ul {
   display: flex;
+  max-width: 700px;
+  overflow: hidden;
 }
 body main #cart ul p {
   color: #fff;

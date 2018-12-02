@@ -3,10 +3,12 @@ var App = {
   $el: $("body"),
   renderMenuView: function() {
     $('#item').hide();
+    $('#checkout').hide();
     this.menu = new MenuView();
     this.renderDishes();
     this.bindEvents();
     router.navigate('menu');
+    this.renderCheckoutView();
   },
   renderDishes: function() {
     this.dishes.each(this.renderDishView);
@@ -29,6 +31,17 @@ var App = {
     this.index = new IndexView();
   },
 
+  renderCheckoutView: function() {
+    $('#menu').hide();
+    $('#item').hide();
+    router.navigate('checkout');
+    this.checkout = new CheckoutView({
+      el: $('#checkout').get(0),
+      collection: this.cart,
+    });
+    this.checkout.$el.show();
+  },
+
   bindEvents: function() {
     _.extend(this, Backbone.Events);
     this.listenTo(this.dishes, "showMenuItem", this.renderItemView);
@@ -39,6 +52,42 @@ var App = {
   },
   createCart: function() {
     this.cart = new CartItems();
+    this.cart.addItem(new Dish(
+      {
+          "id": 19,
+          "name": "Yaki Udon",
+          "price": 11.50,
+          "image": "/images/yaki-udon.jpg",
+          "description": "Udon noodles with chicken, king prawns and vegetables.",
+          "nutriInfo": {
+            "protein": 1.7697,
+            "fat": 0.2534,
+            "carbs": 6.9919,
+            "energyKj": 7.508,
+            "energyKcal": 1.7945,
+            "sugar": 0.1798
+          }
+        }
+    ));
+
+    this.cart.addItem(new Dish(
+        {
+          "id": 18,
+          "name": "Tori Katsu",
+          "price": 11,
+          "image": "/images/tori-katsu.jpg",
+          "description": "Pan-fried chicken breast with yasai salad.",
+          "nutriInfo": {
+            "protein": 1.0267,
+            "fat": 2.2143,
+            "carbs": 6.1597,
+            "energyKj": 17.8688,
+            "energyKcal": 4.2708,
+            "sugar": 0.0161
+          }
+        }
+    ));
+
     this.cart.view = new CartView({
       el: $("#cart").get(0),
       collection: this.cart
