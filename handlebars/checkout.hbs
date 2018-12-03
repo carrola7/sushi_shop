@@ -16,16 +16,20 @@
           <td><img src="{{image}}"/></td>
           <td>{{name}}</td>
           <td>
-            <span class="quantity-plus"></span>
+            <span class="quantity-plus">
+              <i class="fas fa-minus"></i>
+            </span>
             <p>{{quantity}}</p>
-            <span class="quantity-minus"></span>
+            <span class="quantity-minus">
+              <i class="fas fa-plus"></i>
+            </span>
           </td>
-          <td>{{price}}</td>
+          <td>{{formatPrice price}}</td>
         </tr>
       {{/each}}
     </tbody>
   </table>
-  <p>Total: <span class="total">{{total}}</span></p>
+  <p>Total: <span class="total">{{formatPrice total}}</span></p>
   <footer>
     <a href="#">Cancel Order</span>
     <form action="/" method="post">
