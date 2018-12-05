@@ -16,11 +16,11 @@
           <td><img src="{{image}}"/></td>
           <td>{{name}}</td>
           <td>
-            <span class="quantity-plus">
+            <span class="quantity_modifier plus">
               <i class="fas fa-minus"></i>
             </span>
             <p>{{quantity}}</p>
-            <span class="quantity-minus">
+            <span class="quantity_modifier minus">
               <i class="fas fa-plus"></i>
             </span>
           </td>
@@ -31,7 +31,7 @@
   </table>
   <p>Total: <span class="total">{{formatPrice total}}</span></p>
   <footer>
-    <a href="#">Cancel Order</span>
+    <a href="#">Cancel Order</a>
     <form action="/" method="post">
       <input type="submit" value="ORDER NOW!">
     </form>

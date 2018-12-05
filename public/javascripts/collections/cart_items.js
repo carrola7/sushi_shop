@@ -28,6 +28,22 @@ var CartItems = Backbone.Collection.extend({
     this.setTotal().setQuantity();
     this.trigger("cartUpdated");
   },
+  removeItem: function(item) {
+    var existing = this.get(item.get("id"));
+
+    if (existing) {
+      if (existing.get("quantity") === 1) {
+        this.remove(existing);
+      } else {
+        existing.set("quantity", existing.get("quantity") - 1);
+      }
+      this.setTotal().setQuantity();
+      this.trigger("cartUpdated");
+    } 
+  },
+  isNotEmpty() {
+    return this.length > 0;
+  },
   empty: function() {
     this.reset();
     this.setTotal().setQuantity();

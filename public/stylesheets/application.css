@@ -189,7 +189,6 @@ body main #item section article footer h2 {
 }
 body main #item section article footer a {
   float: right;
-  float: right;
   padding: 7px 15px;
   font-size: 0.8rem;
   text-decoration: none;
@@ -202,6 +201,7 @@ body main #item section article footer a {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  float: right;
   margin: 20px 20px 0 0;
 }
 body main #item section article footer a:hover {
@@ -330,6 +330,16 @@ body main #checkout section {
   background: #fff;
   padding: 50px 100px;
 }
+body main #checkout section p {
+  color: #787878;
+  text-align: right;
+  margin-top: 10px;
+}
+body main #checkout section p .total {
+  font-size: 2rem;
+  color: #000;
+  margin-left: 5px;
+}
 body main #checkout section h1 {
   font-size: 2.6rem;
   margin: 0 0 80px 0;
@@ -345,10 +355,64 @@ body main #checkout section table {
 body main #checkout section table th {
   text-transform: uppercase;
 }
+body main #checkout section table th:last-child {
+  text-align: right;
+}
+body main #checkout section table th:nth-child(3) {
+  text-align: center;
+}
 body main #checkout section table td {
   border-top: 1px solid #b0b0b0;
   border-bottom: 1px solid #b0b0b0;
 }
+body main #checkout section table td p {
+  display: inline-block;
+  margin: 0 7px;
+  color: #000;
+}
+body main #checkout section table td span:hover {
+  cursor: pointer;
+}
 body main #checkout section table td:nth-child(2) {
   font-size: 1.2rem;
+}
+body main #checkout section table td:nth-child(3) {
+  text-align: center;
+}
+body main #checkout section table td:last-child {
+  text-align: right;
+  font-size: 1.2rem;
+}
+body main #checkout section footer {
+  text-align: right;
+  margin-top: 50px;
+}
+body main #checkout section footer form {
+  display: inline-block;
+  margin-left: 20px;
+}
+body main #checkout section footer form input {
+  padding: 7px 15px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 15px;
+  letter-spacing: 0.8px;
+  cursor: default;
+}
+body main #checkout section footer form input:hover {
+  background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+}
+body main #checkout section footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d60041;
 }

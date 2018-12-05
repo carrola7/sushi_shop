@@ -37,9 +37,9 @@ this["JST"]["checkout"] = Handlebars.template({"1":function(container,depth0,hel
     + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
     + "\"/></td>          <td>"
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</td>          <td>            <span class=\"quantity-plus\">              <i class=\"fas fa-minus\"></i>            </span>            <p>"
+    + "</td>          <td>            <span class=\"quantity_modifier plus\">              <i class=\"fas fa-minus\"></i>            </span>            <p>"
     + alias4(((helper = (helper = helpers.quantity || (depth0 != null ? depth0.quantity : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"quantity","hash":{},"data":data}) : helper)))
-    + "</p>            <span class=\"quantity-minus\">              <i class=\"fas fa-plus\"></i>            </span>          </td>          <td>"
+    + "</p>            <span class=\"quantity_modifier minus\">              <i class=\"fas fa-plus\"></i>            </span>          </td>          <td>"
     + alias4((helpers.formatPrice || (depth0 && depth0.formatPrice) || alias2).call(alias1,(depth0 != null ? depth0.price : depth0),{"name":"formatPrice","hash":{},"data":data}))
     + "</td>        </tr>      ";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -49,7 +49,7 @@ this["JST"]["checkout"] = Handlebars.template({"1":function(container,depth0,hel
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </tbody>  </table>  <p>Total: <span class=\"total\">"
     + container.escapeExpression((helpers.formatPrice || (depth0 && depth0.formatPrice) || helpers.helperMissing).call(alias1,(depth0 != null ? depth0.total : depth0),{"name":"formatPrice","hash":{},"data":data}))
-    + "</span></p>  <footer>    <a href=\"#\">Cancel Order</span>    <form action=\"/\" method=\"post\">      <input type=\"submit\" value=\"ORDER NOW!\">    </form>  </footer></section><div class=\"image_bottom\"></div>";
+    + "</span></p>  <footer>    <a href=\"#\">Cancel Order</a>    <form action=\"/\" method=\"post\">      <input type=\"submit\" value=\"ORDER NOW!\">    </form>  </footer></section><div class=\"image_bottom\"></div>";
 },"useData":true});
 
 this["JST"]["dish"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
