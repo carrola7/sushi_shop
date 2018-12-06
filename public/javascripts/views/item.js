@@ -24,7 +24,24 @@ var ItemView = Backbone.View.extend({
   },
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
-    App.$el.find('#item').html(this.$el);
+    this.$el.show();
+  },
+  reRender(dish, direction) {
+    this.model = dish;
+    this.$el.html(this.template(this.model.toJSON()));
+    this.$el.find('div.wrapper').hide();
+    if (direction) {
+      this.slide(direction);
+    } else {
+      this.$el.show();
+      $('#item').find('div.wrapper').show();
+    }
+  },
+  slide: function(direction) {
+    this.$el.find('div.wrapper').toggle("slide", {
+      direction: direction,
+      duration: 100
+    });
   },
   initialize: function() {
     this.render();

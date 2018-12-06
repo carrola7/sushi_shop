@@ -23,5 +23,4 @@ var DishView = Backbone.View.extend({
     this.render();
     this.model.view = this;
   },
-
 });

@@ -7,6 +7,7 @@ var CartView = Backbone.View.extend({
   emptyCart: function(event) {
     event.preventDefault();
     this.collection.trigger("emptyCart");
+    this.render();
     this.$el.slideUp();
   },
   render: function() {

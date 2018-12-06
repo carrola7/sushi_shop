@@ -31,6 +31,7 @@ var App = {
     this.header = new HeaderView({
       collection: this.cart
     });
+    this.showCart();
   },
 
   renderIndexView: function() {
@@ -75,19 +76,32 @@ var App = {
     this.menu.$el.show();
     router.navigate('menu');
   },
-  renderItemView: function(dish) {
+  renderItemView: function(dish, direction) {
     this.menu.$el.hide();
     router.navigate(`menu/${dish.id}`);
-    this.item = new ItemView({
-      model: dish
-    });
-    $('#item').show();
+    if (!this.item) {
+      this.item = new ItemView({
+          el: $('#item').get(0),
+          model: dish
+        });
+    } else {
+      this.reRenderItemView(dish);
+    }
+  },
+  reRenderItemView: function(dish, direction) {
+    router.navigate(`menu/${dish.id}`);
+    this.item.reRender(dish, direction);
+  },
+  showCart: function() {
+    if (this.cart && this.cart.isNotEmpty()) {
+      $('#cart').show();
+    }
   },
   showNextItem: function(dish) {
-    this.renderItemView(this.dishes.get(dish.get('id') + 1));
+    this.reRenderItemView(this.dishes.get(dish.get('id') + 1), "right");
   },
   showPreviousItem: function(dish) {
-    this.renderItemView(this.dishes.get(dish.get('id') - 1));
+    this.reRenderItemView(this.dishes.get(dish.get('id') - 1), "left");
   },
   addToCart: function(dish) {
     this.cart || this.createCart();

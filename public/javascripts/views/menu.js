@@ -6,7 +6,6 @@ var MenuView = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template());
     this.$el.appendTo(App.$el.find('main'));
-    //App.$el.find('main').html(this.$el);
   },
 
   initialize: function() {

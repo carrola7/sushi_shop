@@ -1,7 +1,8 @@
 var HeaderView = Backbone.View.extend({
   template: App.templates.header,
   events: {
-    "click div.cart_summary a": "renderMenu"
+    "click div.cart_summary a": "renderMenu",
+    "click a.logo": "renderMenu"
   },
   render: function() {
     this.$el.html(this.template({items: this.collection.getQuantity()}));
@@ -9,6 +10,7 @@ var HeaderView = Backbone.View.extend({
   renderMenu: function(event) {
     event.preventDefault();
     App.showMenuView();
+    App.showCart();
   },
   bindEvents: function() {
     this.collection.on("cartUpdated", this.render.bind(this));
