@@ -6,7 +6,6 @@ var CheckoutView = Backbone.View.extend({
     "submit form": "placeOrder"
   },
   changeQuantity: function(event) {
-    console.log(event.target)
     var id = $(event.target).closest('tr').attr('data-id');
     if (this.isPlusSign(event.target)) {
       this.collection.addItem(this.collection.get(id));
@@ -23,7 +22,6 @@ var CheckoutView = Backbone.View.extend({
     this.collection.empty();
   },
   render: function() {
-//    $('#cart').hide();
     this.$el.html(this.template({
       items: this.collection.toJSON(),
       total: this.collection.getTotal(),
